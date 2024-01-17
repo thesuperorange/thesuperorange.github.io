@@ -1060,6 +1060,7 @@ main {
   grid-template-columns: 1fr;
   gap: 30px;
   margin-bottom: 10px;
+  
 }
 
 .publication-item { display: none; }
@@ -1094,7 +1095,7 @@ main {
 
 
 .publication-title,
-.publication-category { margin-left: 10px; }
+.publication-category { margin-left: 10px; margin-bottom: 20px;}
 
 .publication-title {
   color: var(--white-2);
@@ -1116,6 +1117,7 @@ main {
   color: var(--vegas-gold);
   font-weight: bold;
   line-height: 1.6;
+  
 }
 /***************************/
 
