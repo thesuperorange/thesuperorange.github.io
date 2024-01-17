@@ -475,6 +475,29 @@ main {
   padding: 0 10px;
 }
 
+.cite-list-white {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+} 
+.cite-link {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  padding: 20px 7px;
+  transition: color var(--transition-1);
+}
+
+.cite-link:hover,
+.cite-link:focus { color: var(--light-gray-70); }
+
+.cite-link.active { color: var(--orange-yellow-crayola); }
+
+
+
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-8);
