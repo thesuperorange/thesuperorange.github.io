@@ -528,6 +528,11 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
+.about-text a {
+  display: inline-block;
+  color: var(--white-1);
+  text-decoration: underline;
+}
 
 
 
@@ -1113,9 +1118,25 @@ main {
   font-weight: var(--fw-300);
 }
 
-.publication-category b {
+.publication-category span.highlight{
+  color: var(--white-2);
+  line-height: 1.6;
+  display: inline-block;
+  
+}
+
+.publication-category b{
   color: var(--vegas-gold);
   font-weight: bold;
+  line-height: 1.6;
+  
+}
+
+.publication-category a{
+  display: inline-block;
+  color: var(--white-1);
+  text-decoration: underline;
+  
   line-height: 1.6;
   
 }
@@ -1472,6 +1493,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-link { --fs-8: 14px; }
 
+
+  .navbar a{
+    display: inline-block;
+    color: var(--light-gray);
+    
+    line-height: 1.6;
+    
+  }
 
 
   /**
