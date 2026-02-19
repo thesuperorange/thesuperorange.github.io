@@ -143,17 +143,33 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    const clickedLink = this;
+    const pageName = clickedLink.textContent.trim().toLowerCase();
+    let foundMatch = false;
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+    for (let j = 0; j < pages.length; j++) {
+      if (pageName === pages[j].dataset.page) {
+        foundMatch = true;
+        break;
       }
     }
+    // 若這個 tab 沒有對應的 article（例如 Research 被註解掉），不做任何事，避免清掉所有 active
+    if (!foundMatch) return;
 
+    for (let j = 0; j < pages.length; j++) {
+      if (pageName === pages[j].dataset.page) {
+        pages[j].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[j].classList.remove("active");
+      }
+    }
+    for (let k = 0; k < navigationLinks.length; k++) {
+      if (navigationLinks[k] === clickedLink) {
+        navigationLinks[k].classList.add("active");
+      } else {
+        navigationLinks[k].classList.remove("active");
+      }
+    }
   });
 }
